@@ -16,6 +16,7 @@ import {SearchJob} from '../../../../models/job/SearchJob';
   styleUrls: ['./job-list.component.scss'],
 })
 export class JobListComponent implements OnInit {
+
   public jobs: Job[];
   user: User;
   searchJob: SearchJob;

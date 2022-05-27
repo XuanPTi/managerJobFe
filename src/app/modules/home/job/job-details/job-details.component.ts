@@ -24,7 +24,10 @@ export class JobDetailsComponent implements OnInit{
   reason: string;
 
   // eslint-disable-next-line max-len
-  constructor(private readonly route: ActivatedRoute, private jobService: JobService , private userService: UserService, private readonly router: Router) {
+  constructor(private readonly route: ActivatedRoute, 
+    private jobService: JobService ,
+     private userService: UserService,
+      private readonly router: Router) {
     this.getUser();
   }
 
@@ -45,7 +48,6 @@ export class JobDetailsComponent implements OnInit{
       },
     );
   }
-
   public deleteById(): void {
     this.jobService.delete(this.route.snapshot.params.id).subscribe(
     );

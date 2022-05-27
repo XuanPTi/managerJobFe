@@ -6,10 +6,15 @@ import {ChangePasswordFinishComponent} from './modules/auth/change-password-fini
 import {ChangePasswordInitComponent} from './modules/auth/change-password-init/change-password-init.component';
 
 export const routes: Routes = [
-  {
-    path: 'home-public',
-    loadChildren: () => import('./modules/home-public/home-public.module').then(m => m.HomePublicModule),
+  // {
+  //   path: 'home-public',
+  //   loadChildren: () => import('./modules/home-public/home-public.module').then(m => m.HomePublicModule),
+  // },
+  { path: '', redirectTo: '/home-public', pathMatch: 'full' },
+  { path: 'home-public',
+  loadChildren: () => import('./modules/home-public/home-public.module').then(m => m.HomePublicModule),
   },
+  
   {
     path: 'home',
     canActivate: [AuthGuard],
